@@ -1,3 +1,5 @@
+// https://github.com/parcel-bundler/parcel/issues/505
+
 "use strict";
 import "./index.scss";
 const pdfFileName = "/100q.pdf";
