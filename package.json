@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel build index.html --public-url https://oxibo.github.io/my-portfolio/",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url https://oxibo.github.io/my-portfolio/",
     "deploy": "gh-pages -d dist"
   },
   "author": "OxiBo",
