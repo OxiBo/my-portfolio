@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "build": "parcel build index.html --public-url /my-portfolio/",
-    "deploy": "gh-pages -d dist",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "deploy": "gh-pages -d dist"
   },
   "author": "OxiBo",
   "license": "ISC",
