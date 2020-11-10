@@ -190,6 +190,7 @@ var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"./styles/images/textured.jpeg":[["textured.394f2c97.jpeg","styles/images/textured.jpeg"],"styles/images/textured.jpeg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
+// https://github.com/parcel-bundler/parcel/issues/505
 "use strict";
 
 require("./index.scss");
@@ -499,7 +500,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62522" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49193" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
