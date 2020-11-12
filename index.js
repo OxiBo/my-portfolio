@@ -2,7 +2,7 @@
 
 "use strict";
 import "./index.scss";
-const pdfFileName = "/100q.pdf";
+const pdfFileName = "/my-portfolio/100q.pdf";
 
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll("#navigation li a");
