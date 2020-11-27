@@ -2,8 +2,8 @@
 
 "use strict";
 import "./index.scss";
-const pdfFileName = "/my-portfolio/100q.pdf";
-
+// const pdfFileName = "/my-portfolio/100q.pdf";
+const pdfFileName = "/OB.Stepanchuk_EN.pdf";
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll("#navigation li a");
 const navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
@@ -124,7 +124,7 @@ const projects = [
   },
   {
     name: "Online Store",
-    description: "Online store with login and pay via stripe functionality",
+    description: "Online store with login and pay via stripe",
     image: "express-playground.png",
     url: "https://fullstack-playground.herokuapp.com/",
     github: "https://github.com/OxiBo/express-react-playground"
@@ -262,7 +262,7 @@ const projects = [
         </li>`
     )
     .join()
-    .replace(/,/gi, "");
+    .replace(/(?<=<\/li>),/gi, "");
   // console.log(projectsList);
   ulProjectsList.insertAdjacentHTML("afterbegin", projectsList);
 

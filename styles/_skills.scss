@@ -1,5 +1,7 @@
+@import "./variables";
+
 section#skills {
-  background-color: white;
+  background-color: $skillsBackground;
 //   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
   ul {
     list-style: none;

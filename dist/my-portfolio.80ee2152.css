@@ -13,6 +13,7 @@
 html {
   font-size: 50%;
   font-family: "EB Garamond", serif;
+  color: #50394c;
 }
 @media only screen and (min-width: 68.75em) {
   html html {
@@ -45,7 +46,7 @@ body .main main hr {
 body footer {
   text-align: center;
   height: 7rem;
-  background-color: #fff;
+  background-color: #ffef96;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +56,7 @@ body footer {
 
 nav {
   height: 8rem;
-  background-color: #fff;
+  background-color: #ffef96;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -90,6 +91,7 @@ nav div.menu-bar button#toggle-menu {
   background: none;
 }
 nav div.menu-bar button#toggle-menu i {
+  color: #50394c;
   cursor: pointer;
 }
 nav div.menu-bar button#toggle-menu i.fa-bars {
@@ -103,7 +105,7 @@ nav .closeMenu {
 }
 nav div.collapsible-nav {
   display: none;
-  background-color: #fff;
+  background-color: #ffef96;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -123,7 +125,8 @@ nav div.collapsible-nav ul {
   margin: 0;
 }
 nav div.collapsible-nav ul .active {
-  background-color: lightgray;
+  background-color: #50394c;
+  color: white;
 }
 nav div.collapsible-nav ul li.name {
   margin-right: auto;
@@ -145,6 +148,7 @@ nav div.collapsible-nav ul li a {
   text-decoration: none;
   color: inherit;
   width: 100%;
+  font-weight: 700;
 }
 nav div.collapsible-nav ul li a:before {
   content: "";
@@ -153,7 +157,7 @@ nav div.collapsible-nav ul li a:before {
   height: 3px;
   bottom: -0.4rem;
   left: 0;
-  background: red;
+  background: white;
   visibility: hidden;
   border-radius: 5px;
   transform: scaleX(0);
@@ -167,8 +171,8 @@ nav div.collapsible-nav ul li a img {
   width: 3rem;
 }
 nav div.collapsible-nav ul li:hover {
-  color: green;
-  background-color: lightgrey;
+  color: white;
+  background-color: #50394c;
 }
 @media only screen and (min-width: 768px) {
   nav div.collapsible-nav {
@@ -191,9 +195,6 @@ nav div.collapsible-nav ul li:hover {
   nav div.collapsible-nav ul li a:before {
     height: 3px;
     bottom: 2rem;
-  }
-  nav div.collapsible-nav ul li:hover {
-    background-color: lightgray;
   }
   nav div.menu-bar {
     display: none;
@@ -275,7 +276,7 @@ section#about div div.details p {
 }
 
 section#skills {
-  background-color: white;
+  background-color: #eeebeb;
 }
 section#skills ul {
   list-style: none;
@@ -299,7 +300,7 @@ section#skills ul li p {
   padding: 1rem;
 }
 section#projects {
-  background-color: mistyrose;
+  background-color: #f4e1d2;
 }
 section#projects div ul {
   display: grid;
@@ -352,7 +353,7 @@ section#projects div ul li figcaption a {
   color: white;
   width: calc(50% - 1rem);
   background-color: lightgray;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 1rem;
   margin: 1.5rem 0;
   text-align: center;
@@ -363,7 +364,8 @@ section#projects div ul li figcaption a:hover {
 }
 section#projects div ul li figcaption:hover {
   opacity: 1;
-  background-color: rgba(55, 114, 168, 0.9);
+  background-color: rgba(80, 57, 76, 0.8);
+  color: white;
 }
 section#projects div ul .dimmed {
   opacity: 0.6;
