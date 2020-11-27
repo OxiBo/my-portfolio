@@ -201,7 +201,8 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var pdfFileName = "/100q.pdf"; // exclude nav link to pdf file
+// const pdfFileName = "/my-portfolio/100q.pdf";
+var pdfFileName = "/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
 
 var navLinksAll = document.querySelectorAll("#navigation li a");
 var navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
@@ -308,7 +309,7 @@ var projects = [{
   github: "https://github.com/OxiBo/loginApp"
 }, {
   name: "Online Store",
-  description: "Online store with login and pay via stripe functionality",
+  description: "Online store with login and pay via stripe",
   image: "express-playground.png",
   url: "https://fullstack-playground.herokuapp.com/",
   github: "https://github.com/OxiBo/express-react-playground"
@@ -434,7 +435,7 @@ var projects = [{
         url = _ref.url,
         github = _ref.github;
     return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p></figure>\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
-  }).join().replace(/,/gi, ""); // console.log(projectsList);
+  }).join().replace(/(?<=<\/li>),/gi, ""); // console.log(projectsList);
 
   ulProjectsList.insertAdjacentHTML("afterbegin", projectsList); // highlight hoovered project and dim all siblings
 
@@ -500,7 +501,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62209" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54835" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
