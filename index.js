@@ -3,7 +3,8 @@
 "use strict";
 import "./index.scss";
 // const pdfFileName = "/my-portfolio/100q.pdf";
-const pdfFileName = "/OB.Stepanchuk_EN.pdf";
+// const pdfFileName = "/OB.Stepanchuk_EN.pdf";
+const pdfFileName = "/my-portfolio/OB.Stepanchuk_EN.pdf";
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll("#navigation li a");
 const navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
