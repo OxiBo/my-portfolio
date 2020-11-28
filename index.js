@@ -4,7 +4,7 @@
 import "./index.scss";
 // const pdfFileName = "/my-portfolio/100q.pdf";
 // const pdfFileName = "/OB.Stepanchuk_EN.pdf";
-const pdfFileName = "/OB.Stepanchuk_EN.pdf";
+const pdfFileName = "OB.Stepanchuk_EN.pdf";
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll("#navigation li a");
 const navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
@@ -201,6 +201,7 @@ const projects = [
   function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute("href");
+    console.log(href)
     const offsetTop = document.querySelector(href).offsetTop;
 
     scroll({

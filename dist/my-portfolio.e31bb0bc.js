@@ -203,7 +203,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 // const pdfFileName = "/my-portfolio/100q.pdf";
 // const pdfFileName = "/OB.Stepanchuk_EN.pdf";
-var pdfFileName = "/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
+var pdfFileName = "OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
 
 var navLinksAll = document.querySelectorAll("#navigation li a");
 var navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
@@ -384,6 +384,7 @@ var projects = [{
   function clickHandler(e) {
     e.preventDefault();
     var href = this.getAttribute("href");
+    console.log(href);
     var offsetTop = document.querySelector(href).offsetTop;
     scroll({
       top: offsetTop,
@@ -502,7 +503,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65015" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50597" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
