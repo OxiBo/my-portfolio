@@ -203,14 +203,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 // const pdfFileName = "/my-portfolio/100q.pdf";
 // const pdfFileName = "/OB.Stepanchuk_EN.pdf";
-var pdfFileName = "/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
+var pdfFileName = "/my-portfolio/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
 
 var navLinksAll = document.querySelectorAll("#navigation li a");
 var navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
   console.log(node);
   console.log(pdfFileName);
-  return node.getAttribute("href") !== pdfFileName;
-}); // variables
+  console.log(node.getAttribute("href") !== pdfFileName || node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf"); // TODO -make this filter work for local server and github1
+
+  return node.getAttribute("href") !== pdfFileName && node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf";
+});
+console.log(navLinks); // variables
 
 var ulProjectsList = document.getElementById("projects-list");
 var elements = {
@@ -505,7 +508,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58126" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61431" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
