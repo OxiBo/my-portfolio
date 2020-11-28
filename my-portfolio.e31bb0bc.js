@@ -202,6 +202,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 // const pdfFileName = "/my-portfolio/100q.pdf";
+// const pdfFileName = "/OB.Stepanchuk_EN.pdf";
 var pdfFileName = "/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
 
 var navLinksAll = document.querySelectorAll("#navigation li a");
@@ -501,7 +502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57342" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65015" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
