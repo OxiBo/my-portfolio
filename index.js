@@ -8,13 +8,12 @@ const pdfFileName = "/my-portfolio/OB.Stepanchuk_EN.pdf";
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll("#navigation li a");
 const navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
-  console.log(node)
-  console.log(pdfFileName)
-  console.log(node.getAttribute("href") !== pdfFileName || node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf")
-  // TODO -make this filter work for local server and github1
-  return node.getAttribute("href") !== pdfFileName && node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf";
+  // this makes filter work for local server and github
+  return (
+    node.getAttribute("href") !== pdfFileName &&
+    node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf"
+  );
 });
-console.log(navLinks)
 // variables
 const ulProjectsList = document.getElementById("projects-list");
 const elements = {
@@ -125,36 +124,37 @@ const projects = [
     description: "Login using passport strategies functionality",
     image: "login-app.png",
     url: "",
-    github: "https://github.com/OxiBo/loginApp"
+    github: "https://github.com/OxiBo/loginApp",
   },
   {
     name: "Online Store",
     description: "Online store with login and pay via stripe",
     image: "express-playground.png",
     url: "https://fullstack-playground.herokuapp.com/",
-    github: "https://github.com/OxiBo/express-react-playground"
+    github: "https://github.com/OxiBo/express-react-playground",
   },
   {
     name: "Blog",
     description: "Working blog with comments, likes, user lists",
     image: "blog-app.png",
     url: "https://dev-blog-oxibo.herokuapp.com/",
-    github: "https://github.com/OxiBo/dev-blog-app"
+    github: "https://github.com/OxiBo/dev-blog-app",
   },
   {
     name: "Market Place",
     description: "Sell, buy, review purchases (graphQL backend)",
     image: "market-app.png",
     url: "",
-    github: "https://github.com/OxiBo/market-app-graphql-prisma"
+    github: "https://github.com/OxiBo/market-app-graphql-prisma",
   },
   {
     name: "Shop&Cook",
-    description: "Find recipes, make list of favorites, create and email shopping list",
+    description:
+      "Find recipes, make list of favorites, create and email shopping list",
     image: "shop-cook.png",
     url: "https://shop-cook.herokuapp.com/",
-    github: "https://github.com/OxiBo/shop-cook"
-  }
+    github: "https://github.com/OxiBo/shop-cook",
+  },
 ];
 
 (function () {
@@ -205,7 +205,7 @@ const projects = [
   function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute("href");
-    console.log(href)
+    // console.log(href);
     const offsetTop = document.querySelector(href).offsetTop;
 
     scroll({
@@ -264,7 +264,9 @@ const projects = [
     .map(
       ({ name, description, image, url, github }) =>
         `<li><figure><img src=${image} alt=${name}/><p>${name}</p></figure>
-        <figcaption><p>${description}</p><a href=${url || github} target="_blank">View Project</a></figcaption>
+        <figcaption><p>${description}</p><a href=${
+          url || github
+        } target="_blank">View Project</a></figcaption>
         </li>`
     )
     .join()
