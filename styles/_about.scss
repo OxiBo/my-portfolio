@@ -1,7 +1,12 @@
+@import "./animations";
+
 section#about {
   // https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
-  // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   // background-color: lightgreen;
+  h1{
+    animation: moveInLeft 2s ease-in-out;
+  }
   div {
     display: flex;
     justify-content: center;
@@ -21,9 +26,9 @@ section#about {
         text-decoration: none;
         color: inherit;
       }
-      p{
-        font-size: 2.5rem;
-      }
+      // p{
+      //   font-size: 2.5rem;
+      // }
     }
   }
   @media only screen and (min-width: 768px) {

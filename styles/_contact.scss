@@ -24,6 +24,7 @@ section#contact {
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
+    
       a {
         display: flex;
         justify-content: center;
@@ -36,6 +37,14 @@ section#contact {
         color: white;
         font-size: 2rem;
         border: none;
+        &:hover{
+          box-shadow: 0 1rem 2rem rgba($blackColor, 0.15);
+        transform: translateY(-3px);}
+        transition: all .2s;
+        &:active{
+          box-shadow: 0 .5rem 1rem rgba($blackColor, 0.15);
+          transform: translateY(0);
+        }
         i {
           color: white;
           padding: 1rem;

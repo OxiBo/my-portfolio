@@ -1,8 +1,21 @@
 @import "./variables";
+@import "./animations";
 
 section#skills {
   background-color: $skillsBackground;
-//   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 100px));
+  // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  transform: skewY(-$sectionSkew);
+  hr{
+    transform: skewY($sectionSkew);
+  }
+  div{
+    transform: skewY($sectionSkew);
+  }
+  h1{
+    transform: skewY($sectionSkew);
+    animation: moveInLeft 2s ease-in-out;
+    // transition: all 3s;
+  }
   ul {
     list-style: none;
     display: flex;
@@ -31,3 +44,4 @@ section#skills {
     // }
   }
 }
+
