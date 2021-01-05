@@ -1,16 +1,29 @@
-@import "./variables";
+// @import "./variables";
 
 section#projects {
   background-color: $projectsBackground;
-  transform: skewY(-$sectionSkew);
+  margin-bottom: 5rem;
+  transform: skewY(-$sectionSkewSmall);
+  @include respond(tab-port) {
+    transform: skewY(-$sectionSkew);
+  }
   hr {
-    transform: skewY($sectionSkew);
+    transform: skewY($sectionSkewSmall);
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
   }
   h1 {
-    transform: skewY($sectionSkew);
+    transform: skewY($sectionSkewSmall);
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
   }
   div {
-    transform: skewY($sectionSkew);
+    transform: skewY($sectionSkewSmall);
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
     ul {
       display: grid;
       grid-gap: 5rem;
@@ -19,6 +32,155 @@ section#projects {
       justify-items: center;
       //   align-items: center;
       li {
+        position: relative;
+        perspective: 150rem;
+        max-width: 40rem;
+        figure {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
+          transition: all 1.5s ease;
+
+          img {
+            width: 100%;
+            height: 20rem;
+            object-fit: cover;
+          }
+
+          p {
+            padding: 1rem;
+            display: none;
+            @media only screen and (min-width: 56.25em),
+              only screen and (hover: hover) {
+              display: block;
+            }
+          }
+
+          a,
+          a:visited {
+            color: inherit;
+            font-size: 2rem;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            @media only screen and (min-width: 56.25em),
+              only screen and (hover: hover) {
+              display: none;
+            }
+          }
+        }
+        figcaption {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          transform: rotateY(180deg);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-image: linear-gradient(
+            to right bottom,
+            $projectHoverLight,
+            $projectHoverBackground
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
+          transition: all 1.5s ease;
+
+          p {
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            padding: 2rem;
+          }
+
+          a,
+          a:visited {
+            color: white;
+            width: calc(50% - 1rem);
+            background-color: lightgray;
+            font-size: 2rem;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            text-decoration: none;
+          }
+          a:hover {
+            box-shadow: 0 2rem 3rem rgba($blackColor, 0.9);
+            transform: translateY(-2px);
+            transition: all 0.2s;
+          }
+          a:active {
+            box-shadow: 0 1rem 1.5rem rgba($blackColor, 0.9);
+            transform: translateY(0);
+          }
+        }
+        &:hover figure {
+          // transform: rotateY(-180deg);
+          @media only screen and (min-width: 56.25em), only screen and (hover: hover) {
+            transform: rotateY(-180deg);
+          }
+        }
+
+        &:hover figcaption {
+          // transform: rotateY(0);
+          @media only screen and (min-width: 56.25em), only screen and (hover: hover) {
+            transform: rotateY(0);
+          }
+        }
+      }
+      // ul:hover li figure{
+      //   //   display: flex;
+      //   // visibility: visible;
+      //   opacity: 0.4;
+      //   background-color:red;
+      // }
+      // li figcaption:hover {
+      //   opacity: 1;
+      //   // background-color: $projectHoverBackground;
+      //   background-color: rgba($color: $projectHoverBackground, $alpha: 0.8);
+      //   color: white;
+      // }
+
+      // ul:hover > li:not(.highlighted){
+      //     p{color: red;}
+      // //   opacity: 0.4;
+
+      // }
+
+      // ul:hover li figcaption:not(:hover){
+      //     opacity: 1;
+      //     background-color: lightgreen;
+      // }
+
+      // .highlighted{
+      //     opacity: 1;
+      //     background-color: rgba(0, 0, 255, 0.6);
+      // }
+      .dimmed {
+        opacity: 0.6;
+      }
+    }
+  }
+  //   @media only screen and (min-width: 768px) {
+  //     ul {
+  //       width: 70%;
+  //       margin: 0 auto;
+  //     }
+  //   }
+}
+
+/*
+
+ li {
         position: relative;
         opacity: 1;
         box-shadow: 0 0.5rem 1rem rgba($blackColor, 0.8);
@@ -104,30 +266,8 @@ section#projects {
         background-color: rgba($color: $projectHoverBackground, $alpha: 0.8);
         color: white;
       }
-      // ul:hover > li:not(.highlighted){
-      //     p{color: red;}
-      // //   opacity: 0.4;
 
-      // }
 
-      // ul:hover li figcaption:not(:hover){
-      //     opacity: 1;
-      //     background-color: lightgreen;
-      // }
 
-      // .highlighted{
-      //     opacity: 1;
-      //     background-color: rgba(0, 0, 255, 0.6);
-      // }
-      .dimmed {
-        opacity: 0.6;
-      }
-    }
-  }
-  //   @media only screen and (min-width: 768px) {
-  //     ul {
-  //       width: 70%;
-  //       margin: 0 auto;
-  //     }
-  //   }
-}
+
+*/

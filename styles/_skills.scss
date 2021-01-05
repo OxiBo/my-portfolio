@@ -1,20 +1,32 @@
-@import "./variables";
+// @import "./variables";
 @import "./animations";
 
 section#skills {
   background-color: $skillsBackground;
   // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  transform: skewY(-$sectionSkew);
-  hr{
-    transform: skewY($sectionSkew);
+  transform: skewY(-$sectionSkewSmall);
+  @include respond(tab-port) {
+    transform: skewY(-$sectionSkew);
   }
-  div{
-    transform: skewY($sectionSkew);
+  hr {
+    transform: skewY($sectionSkewSmall);
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
   }
-  h1{
-    transform: skewY($sectionSkew);
+  div {
+    transform: skewY($sectionSkewSmall);
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
+  }
+  h1 {
+    transform: skewY($sectionSkewSmall);
     animation: moveInLeft 2s ease-in-out;
     // transition: all 3s;
+    @include respond(tab-port) {
+      transform: skewY($sectionSkew);
+    }
   }
   ul {
     list-style: none;
@@ -37,11 +49,4 @@ section#skills {
       }
     }
   }
-  @media only screen and (min-width: 768px) {
-    // ul{
-    //     width: 70%;
-    //     margin: 0 auto;
-    // }
-  }
 }
-

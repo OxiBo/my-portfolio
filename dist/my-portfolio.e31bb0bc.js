@@ -437,8 +437,21 @@ var projects = [{
         image = _ref.image,
         url = _ref.url,
         github = _ref.github;
-    return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p></figure>\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
-  }).join().replace(/(?<=<\/li>),/gi, ""); // console.log(projectsList);
+    return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p><a href=").concat(url || github, " target=\"_blank\">").concat(name, "</a></figure>\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
+  }).join().replace(/,(?=<li>)/gi, "");
+  /*
+    const projectsList = projects
+    .map(
+      ({ name, description, image, url, github }) =>
+        `<li><figure><img src=${image} alt=${name}/><p>${name}</p></figure>
+        <figcaption><p>${description}</p><a href=${
+          url || github
+        } target="_blank">View Project</a></figcaption>
+        </li>`
+    )
+    .join()
+    .replace(/(?<=<\/li>),/gi, "");*/
+  // console.log(projectsList);
 
   ulProjectsList.insertAdjacentHTML("afterbegin", projectsList); // highlight hoovered project and dim all siblings
 
@@ -504,7 +517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64386" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54794" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -4,7 +4,24 @@ section#about {
   // https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
   // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   // background-color: lightgreen;
-  h1{
+  // position: relative;
+  // height: 100%;
+
+  // .video {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: -1;
+  //   height: 100%;
+  //   opacity: 0.7;
+  //   width: 100%;
+  //   video {
+  //     height: 100%;
+  //     width: 100%;
+  //     object-fit: cover;
+  //   }
+  // }
+  h1 {
     animation: moveInLeft 2s ease-in-out;
   }
   div {
@@ -12,16 +29,52 @@ section#about {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 4rem auto;
+
+    // margin: 4rem auto;
+    @include respond(tab-port) {
+      // background-color: blue;
+      margin: 0.5rem auto;
+    }
+    @include respond(tab-land) {
+      flex-wrap: nowrap;
+      // background-color: green;
+    }
     div.my-image {
+      padding: 0 5rem;
+      margin: 0 2rem;
+      // width: auto;
+      @include respond(tab-land) {
+       max-width: 40%;
+      }
       img {
-        width: 90%;
+        // width: 90%;
+        max-width: 35rem;
+        padding: 0 1rem;
+        @include respond(tab-port) {
+          max-width: 35rem;
+        }
+        @include respond(tab-land) {
+          max-width: 30rem;
+        }
+        @include respond(desktop) {
+        width: 40rem;
+        }
       }
     }
     div.details {
-      flex: 1 100%;
+      flex: 1 70rem;
       text-align: center;
-      padding: 1rem;
+      // padding: 1rem;
+      padding: 0 1rem;
+   
+      @include respond(tab-port) {
+        flex: 1 100rem;
+        flex-wrap: wrap;
+      }
+      @include respond(tab-land) {
+        flex: 1 120rem;
+        flex-wrap: wrap;
+      }
       a {
         text-decoration: none;
         color: inherit;
@@ -29,21 +82,6 @@ section#about {
       // p{
       //   font-size: 2.5rem;
       // }
-    }
-  }
-  @media only screen and (min-width: 768px) {
-    div {
-      flex-wrap: nowrap;
-      margin: 0.5rem auto;
-      .my-image {
-        img {
-          width: 40rem;
-        }
-      }
-      .details {
-        flex: 1 20rem;
-        flex-wrap: wrap;
-      }
     }
   }
 }

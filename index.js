@@ -258,9 +258,25 @@ const projects = [
   });
   languages = languages.join().replace(/,/gi, "");
   ulLanguages.insertAdjacentHTML("afterbegin", languages);
-
+  
   // render projects
   const projectsList = projects
+    .map(
+      ({ name, description, image, url, github }) =>
+        `<li><figure><img src=${image} alt=${name}/><p>${name}</p><a href=${
+          url || github
+        } target="_blank">${name}</a></figure>
+        <figcaption><p>${description}</p><a href=${
+          url || github
+        } target="_blank">View Project</a></figcaption>
+        </li>`
+    )
+    .join()
+  
+  .replace(/,(?=<li>)/gi, "");
+
+  /*
+    const projectsList = projects
     .map(
       ({ name, description, image, url, github }) =>
         `<li><figure><img src=${image} alt=${name}/><p>${name}</p></figure>
@@ -270,7 +286,8 @@ const projects = [
         </li>`
     )
     .join()
-    .replace(/(?<=<\/li>),/gi, "");
+    .replace(/(?<=<\/li>),/gi, "");*/
+
   // console.log(projectsList);
   ulProjectsList.insertAdjacentHTML("afterbegin", projectsList);
 
