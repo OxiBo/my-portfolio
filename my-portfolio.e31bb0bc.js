@@ -304,12 +304,19 @@ var projects = [{
   url: "https://codepen.io/OxiBo/full/vddYrz",
   github: "https://github.com/OxiBo/twitch-tv-app-react-redux"
 }, {
-  name: "Login App",
-  description: "Login using passport strategies functionality",
+  name: "E-commerce website",
+  description: "Create accounts, buy products, keep track of products reviewing",
   image: "login-app.png",
-  url: "",
-  github: "https://github.com/OxiBo/loginApp"
-}, {
+  url: "https://fullstack-playground.herokuapp.com/",
+  github: "https://github.com/OxiBo/express-react-playground"
+}, // {
+//   name: "Login App",
+//   description: "Login using passport strategies functionality",
+//   image: "login-app.png",
+//   url: "",
+//   github: "https://github.com/OxiBo/loginApp",
+// },
+{
   name: "Online Store",
   description: "Online store with login and pay via stripe",
   image: "express-playground.png",
@@ -517,7 +524,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54794" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53616" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
