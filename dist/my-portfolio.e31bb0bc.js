@@ -191,7 +191,7 @@ module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
 },{"./styles/images/textured.jpeg":[["textured.394f2c97.jpeg","styles/images/textured.jpeg"],"styles/images/textured.jpeg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 // https://github.com/parcel-bundler/parcel/issues/505
-"use strict";
+'use strict';
 
 require("./index.scss");
 
@@ -203,144 +203,147 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 // const pdfFileName = "/my-portfolio/100q.pdf";
 // const pdfFileName = "/OB.Stepanchuk_EN.pdf";
-var pdfFileName = "/my-portfolio/OB.Stepanchuk_EN.pdf"; // exclude nav link to pdf file
+var pdfFileName = '/my-portfolio/OB.Stepanchuk_EN.pdf'; // exclude nav link to pdf file
 
-var navLinksAll = document.querySelectorAll("#navigation li a");
+var navLinksAll = document.querySelectorAll('#navigation li a');
 var navLinks = Array.prototype.filter.call(navLinksAll, function (node) {
   // this makes filter work for local server and github
-  return node.getAttribute("href") !== pdfFileName && node.getAttribute("href") !== "/OB.Stepanchuk_EN.pdf";
+  return node.getAttribute('href') !== pdfFileName && node.getAttribute('href') !== '/OB.Stepanchuk_EN.pdf';
 }); // variables
 
-var ulProjectsList = document.getElementById("projects-list");
+var ulProjectsList = document.getElementById('projects-list');
 var elements = {
-  menuButton: document.getElementById("toggle-menu"),
-  menuBarIcon: document.querySelector(".fa-bars"),
-  menuClose: document.querySelector(".fa-window-close"),
-  navbar: document.querySelector(".collapsible-nav"),
+  menuButton: document.getElementById('toggle-menu'),
+  menuBarIcon: document.querySelector('.fa-bars'),
+  menuClose: document.querySelector('.fa-window-close'),
+  navbar: document.querySelector('.collapsible-nav'),
   navLinks: navLinks,
   // document.querySelectorAll("#navigation li a"), without the link to pdg file
-  section: document.querySelectorAll("section"),
-  ulLanguages: document.getElementById("languages"),
+  section: document.querySelectorAll('section'),
+  ulLanguages: document.getElementById('languages'),
   ulProjectsList: ulProjectsList,
   liProjectsList: ulProjectsList.children
 }; // programing languages icons - https://icon-icons.com/download/67193/PNG/512/
 
 var languagesIcons = {
-  HTML5: "HTML5_icon.png",
-  CSS: "CSS_icon.png",
-  SASS: "scss_icon.png",
-  Bootstrap: "bootstrap_icon.png",
-  Javascript: "javascript-icon.png",
-  React: "react_icon.png",
-  Redux: "redux_icon.png",
-  Node: "nodejs-icon.png",
-  SQL: "sql_icon.png",
-  Mongo: "mongo_icon.png",
-  GraphQL: "graphql_icon.png",
-  Prisma: "prisma_icon.png",
-  Webpack: "webpack_icon.png",
-  Github: "github_icon.png",
-  Heroku: "heroku_icon.png"
+  HTML5: 'HTML5_icon.png',
+  CSS: 'CSS_icon.png',
+  SASS: 'scss_icon.png',
+  Bootstrap: 'bootstrap_icon.png',
+  Javascript: 'javascript-icon.png',
+  React: 'react_icon.png',
+  Redux: 'redux_icon.png',
+  MaterialUI: 'material-ui-logo.png',
+  //'material_ui_icon.png',
+  Node: 'nodejs-icon.png',
+  Mongo: 'mongo_icon.png',
+  GraphQL: 'graphql_icon.png',
+  Github: 'github_icon.png',
+  Webpack: 'webpack_icon.png',
+  Prisma: 'prisma_icon.png',
+  SQL: 'sql_icon.png',
+  Heroku: 'heroku_icon.png'
 }; // projects list
 
 var projects = [{
-  name: "Wikipedia Viewer",
-  description: "Search Wikipedia entries and see the results",
-  image: "wiki-viewer.png",
-  url: "https://codepen.io/OxiBo/full/XZrZjo/",
-  github: ""
+  name: 'Blog',
+  description: 'Working blog with comments, likes, user lists',
+  image: 'blog-app.png',
+  url: 'https://dev-blog-oxibo.herokuapp.com/',
+  github: 'https://github.com/OxiBo/dev-blog-app'
 }, {
-  name: "Random Quote Engine",
-  description: "Find random quote",
-  image: "random-quote.png",
-  url: "https://codepen.io/OxiBo/full/rpPYOq/",
-  github: "https://github.com/OxiBo/random-quote-machine-react"
+  name: 'Shop&Cook',
+  description: 'Find recipes, make list of favorites, create and email shopping list',
+  image: 'shop-cook.png',
+  url: 'https://github.com/OxiBo/shop-cook',
+  //"https://shop-cook.herokuapp.com/",
+  github: 'https://github.com/OxiBo/shop-cook'
 }, {
-  name: "Local Weather APP",
-  description: "Shows local weather with respective background",
-  image: "local-weather.png",
-  url: "https://codepen.io/OxiBo/full/opVJVe",
-  github: "https://github.com/OxiBo/local-weather-app-react"
+  name: 'Market Place',
+  description: 'Sell, buy, review purchases (graphQL backend)',
+  image: 'market-app.png',
+  url: '',
+  github: 'https://github.com/OxiBo/market-app-graphql-prisma'
 }, {
-  name: "Product Landing Page",
-  description: "Example of a product landing home page",
-  image: "product-landing.png",
-  url: "https://codepen.io/OxiBo/full/GBWqBR",
-  github: "https://github.com/OxiBo/Product-Landing-Page"
+  name: 'Online store',
+  description: 'Create accounts, buy products, keep track of products reviewing',
+  image: 'express-playground.png',
+  url: 'https://fullstack-playground.herokuapp.com/',
+  github: 'https://github.com/OxiBo/express-react-playground'
 }, {
-  name: "Technical Docs Page",
-  description: "Example of technical documentation page",
-  image: "tech-page.png",
-  url: "https://codepen.io/OxiBo/full/Zjjzzm",
-  github: "https://github.com/OxiBo/Technical-documentation-page"
+  name: 'Login App',
+  description: 'Login using passport strategies functionality',
+  image: 'login-app.png',
+  url: '',
+  github: 'https://github.com/OxiBo/loginApp'
 }, {
-  name: "Markdown Previewer",
-  description: "Working markdown previewer",
-  image: "markdown-previewer.png",
-  url: "https://codepen.io/OxiBo/full/LXyaeB",
-  github: "https://github.com/OxiBo/markdown-previewer"
+  name: 'Wikipedia Viewer',
+  description: 'Search Wikipedia entries and see the results',
+  image: 'wiki-viewer.png',
+  url: 'https://codepen.io/OxiBo/full/XZrZjo/',
+  github: ''
 }, {
-  name: "Drum Machine",
-  description: "Working drum machine",
-  image: "drum-machine.png",
-  url: "https://codepen.io/OxiBo/full/XOpdpb",
-  github: "https://github.com/OxiBo/drum-machine-refactor"
+  name: 'Random Quote Engine',
+  description: 'Find random quote',
+  image: 'random-quote.png',
+  url: 'https://codepen.io/OxiBo/full/rpPYOq/',
+  github: 'https://github.com/OxiBo/random-quote-machine-react'
 }, {
-  name: "JS Calculator",
-  description: "JavaScript Calculator",
-  image: "js-calculator.png",
-  url: "https://codepen.io/OxiBo/full/zYOzNmE",
-  github: "https://github.com/OxiBo/javascript-calculator"
+  name: 'Local Weather APP',
+  description: 'Shows local weather with respective background',
+  image: 'local-weather.png',
+  url: 'https://codepen.io/OxiBo/full/opVJVe',
+  github: 'https://github.com/OxiBo/local-weather-app-react'
 }, {
-  name: "Pomodoro Clock",
-  description: "Pomodoro Technique (a time management method) implementation",
-  image: "pomodoro-clock.png",
-  url: "https://codepen.io/OxiBo/full/pooJMJQ",
-  github: "https://github.com/OxiBo/pomodoro-clock"
+  name: 'Product Landing Page',
+  description: 'Example of a product landing home page',
+  image: 'product-landing.png',
+  url: 'https://codepen.io/OxiBo/full/GBWqBR',
+  github: 'https://github.com/OxiBo/Product-Landing-Page'
 }, {
-  name: "Twitch TV Streamers",
-  description: "View and lookup Twitch TV streamers",
-  image: "twitch.png",
-  url: "https://codepen.io/OxiBo/full/vddYrz",
-  github: "https://github.com/OxiBo/twitch-tv-app-react-redux"
+  name: 'Technical Docs Page',
+  description: 'Example of technical documentation page',
+  image: 'tech-page.png',
+  url: 'https://codepen.io/OxiBo/full/Zjjzzm',
+  github: 'https://github.com/OxiBo/Technical-documentation-page'
 }, {
-  name: "E-commerce website",
-  description: "Create accounts, buy products, keep track of products reviewing",
-  image: "login-app.png",
-  url: "https://fullstack-playground.herokuapp.com/",
-  github: "https://github.com/OxiBo/express-react-playground"
-}, // {
-//   name: "Login App",
-//   description: "Login using passport strategies functionality",
-//   image: "login-app.png",
-//   url: "",
-//   github: "https://github.com/OxiBo/loginApp",
+  name: 'Markdown Previewer',
+  description: 'Working markdown previewer',
+  image: 'markdown-previewer.png',
+  url: 'https://codepen.io/OxiBo/full/LXyaeB',
+  github: 'https://github.com/OxiBo/markdown-previewer'
+}, {
+  name: 'Drum Machine',
+  description: 'Working drum machine',
+  image: 'drum-machine.png',
+  url: 'https://codepen.io/OxiBo/full/XOpdpb',
+  github: 'https://github.com/OxiBo/drum-machine-refactor'
+}, {
+  name: 'JS Calculator',
+  description: 'JavaScript Calculator',
+  image: 'js-calculator.png',
+  url: 'https://codepen.io/OxiBo/full/zYOzNmE',
+  github: 'https://github.com/OxiBo/javascript-calculator'
+}, {
+  name: 'Pomodoro Clock',
+  description: 'Pomodoro Technique (a time management method) implementation',
+  image: 'pomodoro-clock.png',
+  url: 'https://codepen.io/OxiBo/full/pooJMJQ',
+  github: 'https://github.com/OxiBo/pomodoro-clock'
+}, {
+  name: 'Twitch TV Streamers',
+  description: 'View and lookup Twitch TV streamers',
+  image: 'twitch.png',
+  url: 'https://codepen.io/OxiBo/full/vddYrz',
+  github: 'https://github.com/OxiBo/twitch-tv-app-react-redux'
+} // {
+//   name: "Online Store",
+//   description: "Online store with login and pay via stripe",
+//   image: "express-playground.png",
+//   url: "https://fullstack-playground.herokuapp.com/",
+//   github: "https://github.com/OxiBo/express-react-playground",
 // },
-{
-  name: "Online Store",
-  description: "Online store with login and pay via stripe",
-  image: "express-playground.png",
-  url: "https://fullstack-playground.herokuapp.com/",
-  github: "https://github.com/OxiBo/express-react-playground"
-}, {
-  name: "Blog",
-  description: "Working blog with comments, likes, user lists",
-  image: "blog-app.png",
-  url: "https://dev-blog-oxibo.herokuapp.com/",
-  github: "https://github.com/OxiBo/dev-blog-app"
-}, {
-  name: "Market Place",
-  description: "Sell, buy, review purchases (graphQL backend)",
-  image: "market-app.png",
-  url: "",
-  github: "https://github.com/OxiBo/market-app-graphql-prisma"
-}, {
-  name: "Shop&Cook",
-  description: "Find recipes, make list of favorites, create and email shopping list",
-  image: "shop-cook.png",
-  url: "https://shop-cook.herokuapp.com/",
-  github: "https://github.com/OxiBo/shop-cook"
-}];
+];
 
 (function () {
   var menuButton = elements.menuButton,
@@ -354,19 +357,19 @@ var projects = [{
       section = elements.section,
       liProjectsList = elements.liProjectsList; // open collapsible menu
 
-  menuButton.addEventListener("click", function () {
-    navbar.classList.toggle("open");
-    menuBarIcon.classList.toggle("open");
-    menuClose.classList.toggle("closeMenu");
+  menuButton.addEventListener('click', function () {
+    navbar.classList.toggle('open');
+    menuBarIcon.classList.toggle('open');
+    menuClose.classList.toggle('closeMenu');
   }); //https://stackoverflow.com/questions/54605406/closing-a-menu-on-an-outside-click-pure-javascript
   // When the user clicks anywhere outside of the menu window, close menu
 
-  window.addEventListener("click", function (event) {
+  window.addEventListener('click', function (event) {
     // console.log(navbar.className.includes('open'))
-    if (event.target.closest("button#toggle-menu") !== menuButton && navbar.className.includes("open")) {
-      navbar.classList.remove("open");
-      menuBarIcon.classList.toggle("open");
-      menuClose.classList.toggle("closeMenu");
+    if (event.target.closest('button#toggle-menu') !== menuButton && navbar.className.includes('open')) {
+      navbar.classList.remove('open');
+      menuBarIcon.classList.toggle('open');
+      menuClose.classList.toggle('closeMenu');
     }
   }); // smooth scroll - https://webdesign.tutsplus.com/tutorials/smooth-scrolling-vanilla-javascript--cms-35165
   // const navFiltered = Array.prototype.filter.call(navLinks, function (node) {
@@ -381,7 +384,7 @@ var projects = [{
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var link = _step.value;
       // console.log(link);
-      link.addEventListener("click", clickHandler);
+      link.addEventListener('click', clickHandler);
     }
   } catch (err) {
     _iterator.e(err);
@@ -391,12 +394,13 @@ var projects = [{
 
   function clickHandler(e) {
     e.preventDefault();
-    var href = this.getAttribute("href"); // console.log(href);
+    var href = this.getAttribute('href'); // console.log(href);
 
     var offsetTop = document.querySelector(href).offsetTop;
+    console.log(offsetTop);
     scroll({
-      top: offsetTop,
-      behavior: "smooth"
+      top: offsetTop - 40,
+      behavior: 'smooth'
     });
   } // scrollspy - https://codepen.io/zchee/pen/ogzvZZ
   // TODO - Intersection Observer API https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
@@ -406,6 +410,7 @@ var projects = [{
   var i = 0; // iterate over sections (it is not an array but array-like that is why need to use Array.prototype and call()) to get sections ids and offset (position)
 
   Array.prototype.forEach.call(section, function (e) {
+    console.log(e.offsetTop);
     sections[e.id] = e.offsetTop;
   });
 
@@ -415,8 +420,8 @@ var projects = [{
     for (i in sections) {
       if (sections[i] <= scrollPosition) {
         // document.querySelector(".active").setAttribute("class", " ");
-        document.querySelector(".active").classList.remove("active");
-        document.querySelector("a[href*=" + i + "]").closest("li").classList.add("active");
+        document.querySelector('.active').classList.remove('active');
+        document.querySelector('a[href*=' + i + ']').closest('li').classList.add('active');
       }
     }
   }; // render skills(languages) icons
@@ -435,8 +440,8 @@ var projects = [{
   Object.keys(languagesIcons).map(function (key) {
     languages.push("<li><img src=\"".concat(languagesIcons[key], "\" alt=\"").concat(key, "\"/><p>").concat(key, "</p></li>"));
   });
-  languages = languages.join().replace(/,/gi, "");
-  ulLanguages.insertAdjacentHTML("afterbegin", languages); // render projects
+  languages = languages.join().replace(/,/gi, '');
+  ulLanguages.insertAdjacentHTML('afterbegin', languages); // render projects
 
   var projectsList = projects.map(function (_ref) {
     var name = _ref.name,
@@ -445,7 +450,7 @@ var projects = [{
         url = _ref.url,
         github = _ref.github;
     return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p><a href=").concat(url || github, " target=\"_blank\">").concat(name, "</a></figure>\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
-  }).join().replace(/,(?=<li>)/gi, "");
+  }).join().replace(/,(?=<li>)/gi, '');
   /*
     const projectsList = projects
     .map(
@@ -460,7 +465,7 @@ var projects = [{
     .replace(/(?<=<\/li>),/gi, "");*/
   // console.log(projectsList);
 
-  ulProjectsList.insertAdjacentHTML("afterbegin", projectsList); // highlight hoovered project and dim all siblings
+  ulProjectsList.insertAdjacentHTML('afterbegin', projectsList); // highlight hoovered project and dim all siblings
 
   /*
   Array.prototype.forEach.call(liProjectsList, (li) => {
@@ -524,7 +529,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53616" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59261" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
