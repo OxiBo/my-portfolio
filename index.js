@@ -120,12 +120,20 @@ const projects = [
   },
 
   {
-    name: "Login App",
-    description: "Login using passport strategies functionality",
+    name: "E-commerce website",
+    description: "Create accounts, buy products, keep track of products reviewing",
     image: "login-app.png",
-    url: "",
-    github: "https://github.com/OxiBo/loginApp",
+    url: "https://fullstack-playground.herokuapp.com/",
+    github: "https://github.com/OxiBo/express-react-playground",
   },
+
+  // {
+  //   name: "Login App",
+  //   description: "Login using passport strategies functionality",
+  //   image: "login-app.png",
+  //   url: "",
+  //   github: "https://github.com/OxiBo/loginApp",
+  // },
   {
     name: "Online Store",
     description: "Online store with login and pay via stripe",
