@@ -35,7 +35,7 @@ section#projects {
         position: relative;
         perspective: 150rem;
         max-width: 40rem;
-        border: 2px solid yellow;
+       // border: 2px solid yellow;
 
         figure {
           -webkit-backface-visibility: hidden;
@@ -47,7 +47,7 @@ section#projects {
           align-items: center;
           box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
           transition: all 1.5s ease;
-          border: 2px solid green;
+         // border: 2px solid green;
 
           img {
             width: 100%;

@@ -50,6 +50,14 @@ const languagesIcons = {
 // projects list
 const projects = [
   {
+    name: 'Make Cocktails',
+    description:
+      'Find cocktails recipes, make list of favorites, email recipes',
+    image: 'fun-mixie.png',
+    url: 'https://github.com/OxiBo/fun-mixie', //"https://shop-cook.herokuapp.com/",
+    github: 'https://github.com/OxiBo/fun-mixie',
+  },
+  {
     name: 'Blog',
     description: 'Working blog with comments, likes, user lists',
     image: 'blog-app.png',
@@ -153,8 +161,8 @@ const projects = [
     name: 'Twitch TV Streamers',
     description: 'View and lookup Twitch TV streamers',
     image: 'twitch.png',
-    url: 'https://codepen.io/OxiBo/full/vddYrz',
-    github: 'https://github.com/OxiBo/twitch-tv-app-react-redux',
+    url: 'https://oxibo.github.io/twitch-tv-api/',
+    github: 'https://github.com/OxiBo/twitch-tv-api',
   },
 
   // {

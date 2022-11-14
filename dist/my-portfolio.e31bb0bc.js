@@ -246,6 +246,13 @@ var languagesIcons = {
 }; // projects list
 
 var projects = [{
+  name: 'Make Cocktails',
+  description: 'Find cocktails recipes, make list of favorites, email recipes',
+  image: 'fun-mixie.png',
+  url: 'https://github.com/OxiBo/fun-mixie',
+  //"https://shop-cook.herokuapp.com/",
+  github: 'https://github.com/OxiBo/fun-mixie'
+}, {
   name: 'Blog',
   description: 'Working blog with comments, likes, user lists',
   image: 'blog-app.png',
@@ -334,8 +341,8 @@ var projects = [{
   name: 'Twitch TV Streamers',
   description: 'View and lookup Twitch TV streamers',
   image: 'twitch.png',
-  url: 'https://codepen.io/OxiBo/full/vddYrz',
-  github: 'https://github.com/OxiBo/twitch-tv-app-react-redux'
+  url: 'https://oxibo.github.io/twitch-tv-api/',
+  github: 'https://github.com/OxiBo/twitch-tv-api'
 } // {
 //   name: "Online Store",
 //   description: "Online store with login and pay via stripe",
@@ -529,7 +536,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59261" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53342" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
