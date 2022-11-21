@@ -456,7 +456,7 @@ var projects = [{
         image = _ref.image,
         url = _ref.url,
         github = _ref.github;
-    return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p><a href=").concat(url || github, " target=\"_blank\">").concat(name, "</a></figure>\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
+    return "<li><figure><img src=".concat(image, " alt=").concat(name, "/><p>").concat(name, "</p><a href=").concat(url || github, " target=\"_blank\">").concat(name, "</a></figure>\n        <hr />\n        <figcaption><p>").concat(description, "</p><a href=").concat(url || github, " target=\"_blank\">View Project</a></figcaption>\n        </li>");
   }).join().replace(/,(?=<li>)/gi, '');
   /*
     const projectsList = projects
@@ -536,7 +536,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53342" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59121" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
