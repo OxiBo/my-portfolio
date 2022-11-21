@@ -284,6 +284,7 @@ const projects = [
         `<li><figure><img src=${image} alt=${name}/><p>${name}</p><a href=${
           url || github
         } target="_blank">${name}</a></figure>
+        <hr />
         <figcaption><p>${description}</p><a href=${
           url || github
         } target="_blank">View Project</a></figcaption>

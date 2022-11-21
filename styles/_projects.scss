@@ -30,79 +30,108 @@ section#projects {
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
       list-style: none;
       justify-items: center;
-      //   align-items: center;
       li {
         position: relative;
-        perspective: 150rem;
-        max-width: 40rem;
-       // border: 2px solid yellow;
-
+        opacity: 1;
+        width: 30rem;
+        background-color: #fff;
+        box-shadow: 0 0.5rem 1rem rgba($blackColor, 0.8);
+        &:hover {
+          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
+          transform: translateY(-2px);
+          transition: all 0.2s;
+        }
         figure {
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
           background-color: #fff;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
-          transition: all 1.5s ease;
-         // border: 2px solid green;
+          transition: 0.45s ease-in-out;
 
           img {
             width: 100%;
-            height: 20rem;
+            height: 150px;
             object-fit: cover;
           }
 
           p {
             padding: 1rem;
-            display: none;
-            @media only screen and (min-width: 56.25em),
-              only screen and (hover: hover) {
-              display: block;
+            @media only screen and (max-width: 56.25em) {
+              display: none;
             }
           }
 
           a,
           a:visited {
-            color: inherit;
             font-size: 2rem;
-            padding: 1rem;
+            margin: 1.5rem 0;
             text-align: center;
             text-decoration: none;
-            @media only screen and (min-width: 56.25em),
-              only screen and (hover: hover) {
-              display: none;
+            display: none;
+            //  @include respond(tab-land) {
+            @media only screen and (max-width: 56.25em) {
+              display: block;
             }
+          }
+
+          a:hover {
+            letter-spacing: 1.5px;
+            transition: all 0.5s;
+          }
+          a:active {
+            letter-spacing: 1.5px;
+            transition: all 0.5s;
+          }
+        }
+        hr {
+          display: none;
+          @media only screen and (max-width: 56.25em) {
+            display: block;
+            transform: skewY(0deg);
+            margin: 0;
           }
         }
         figcaption {
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          transform: rotateY(180deg);
           display: flex;
+          opacity: 0;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-image: linear-gradient(
-            to right bottom,
-            $projectHoverLight,
-            $projectHoverBackground
-          );
+          //   background-color: rgba(0, 0, 255, 0.6);
           position: absolute;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
-          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
-          transition: all 1.5s ease;
+          // transform: scale(1.05, 1.05);
+          transition: 0.45s ease-in-out;
 
+          // styles for mobile to make all info on one side
+
+          //   @include respond(tab-port) {
+          @media only screen and (max-width: 56.25em) {
+            background-color: #fff;
+            position: static !important;
+            opacity: 1;
+            pointer-events: none; // to disable hover effects
+            // left: 0;
+            height: auto;
+          }
           p {
+            // font-size: 2.5rem;
+
             color: white;
             font-weight: 600;
             text-align: center;
             padding: 2rem;
+
+            @media only screen and (max-width: 56.25em) {
+              padding: 1rem 2rem 1.5rem 2rem;
+              font-size: 1.5rem;
+              color: inherit;
+              //border-top: 1px solid rgb(245, 235, 235);
+            }
           }
 
           a,
@@ -115,9 +144,15 @@ section#projects {
             margin: 1.5rem 0;
             text-align: center;
             text-decoration: none;
+            @media only screen and (max-width: 56.25em) {
+              display: none;
+            }
           }
+
           a:hover {
             box-shadow: 0 2rem 3rem rgba($blackColor, 0.9);
+            // box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            //   0 17px 50px 0 rgba(0, 0, 0, 0.19); //$buttonsBoxShadow;
             transform: translateY(-2px);
             transition: all 0.2s;
           }
@@ -126,22 +161,20 @@ section#projects {
             transform: translateY(0);
           }
         }
-        &:hover figure {
-          // transform: rotateY(-180deg);
-          @media only screen and (min-width: 56.25em),
-            only screen and (hover: hover) {
-            transform: rotateY(-180deg);
-          }
-        }
-
-        &:hover figcaption {
-          // transform: rotateY(0);
-          @media only screen and (min-width: 56.25em),
-            only screen and (hover: hover) {
-            transform: rotateY(0);
-          }
-        }
       }
+      // ul:hover li figure{
+      //   //   display: flex;
+      //   // visibility: visible;
+      //   opacity: 0.4;
+      //   background-color:red;
+      // }
+      li figcaption:hover {
+        opacity: 1;
+        // background-color: $projectHoverBackground;
+        background-color: rgba($color: $projectHoverBackground, $alpha: 0.8);
+        color: white;
+      }
+
       // ul:hover li figure{
       //   //   display: flex;
       //   // visibility: visible;
@@ -183,96 +216,117 @@ section#projects {
   //   }
 }
 
-/*
+// styles for flipping cards
 
- li {
-        position: relative;
-        opacity: 1;
-        box-shadow: 0 0.5rem 1rem rgba($blackColor, 0.8);
-        &:hover {
-          box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
-          transform: translateY(-2px);
-          transition: all 0.2s;
-        }
-        figure {
-          background-color: #fff;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          transition: 0.45s ease-in-out;
+// li {
+//   position: relative;
+//   perspective: 150rem;
+//   width: 30rem;
+//   //max-width: 40rem;
+//  // border: 2px solid yellow;
 
-          img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-          }
+//   figure {
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+//     background-color: #fff;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
+//     transition: all 1.5s ease;
+//    // border: 2px solid green;
 
-          p {
-            padding: 1rem;
-          }
-        }
-        figcaption {
-          display: flex;
-          opacity: 0;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          //   background-color: rgba(0, 0, 255, 0.6);
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          // transform: scale(1.05, 1.05);
-          transition: 0.45s ease-in-out;
+//     img {
+//       width: 100%;
+//       height: 20rem;
+//       object-fit: cover;
+//     }
 
-          p {
-            // font-size: 2.5rem;
-            color: white;
-            font-weight: 600;
-            text-align: center;
-            padding: 2rem;
-          }
+//     p {
+//       padding: 1rem;
+//       display: none;
+//       @media only screen and (min-width: 56.25em),
+//         only screen and (hover: hover) {
+//         display: block;
+//       }
+//     }
 
-          a,
-          a:visited {
-            color: white;
-            width: calc(50% - 1rem);
-            background-color: lightgray;
-            font-size: 2rem;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            text-align: center;
-            text-decoration: none;
-          }
-          a:hover {
-            box-shadow: 0 2rem 3rem rgba($blackColor, 0.9);
-            // box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-            //   0 17px 50px 0 rgba(0, 0, 0, 0.19); //$buttonsBoxShadow;
-            transform: translateY(-2px);
-            transition: all 0.2s;
-          }
-          a:active {
-            box-shadow: 0 1rem 1.5rem rgba($blackColor, 0.9);
-            transform: translateY(0);
-          }
-        }
-      }
-      // ul:hover li figure{
-      //   //   display: flex;
-      //   // visibility: visible;
-      //   opacity: 0.4;
-      //   background-color:red;
-      // }
-      li figcaption:hover {
-        opacity: 1;
-        // background-color: $projectHoverBackground;
-        background-color: rgba($color: $projectHoverBackground, $alpha: 0.8);
-        color: white;
-      }
+//     a,
+//     a:visited {
+//       color: inherit;
+//       font-size: 2rem;
+//       padding: 1rem;
+//       text-align: center;
+//       text-decoration: none;
+//       @media only screen and (min-width: 56.25em),
+//         only screen and (hover: hover) {
+//         display: none;
+//       }
+//     }
+//   }
+//   figcaption {
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+//     transform: rotateY(180deg);
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     background-image: linear-gradient(
+//       to right bottom,
+//       $projectHoverLight,
+//       $projectHoverBackground
+//     );
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     box-shadow: 0 1rem 2rem rgba($blackColor, 0.8);
+//     transition: all 1.5s ease;
 
+//     p {
+//       color: white;
+//       font-weight: 600;
+//       text-align: center;
+//       padding: 2rem;
+//     }
 
+//     a,
+//     a:visited {
+//       color: white;
+//       width: calc(50% - 1rem);
+//       background-color: lightgray;
+//       font-size: 2rem;
+//       padding: 1rem;
+//       margin: 1.5rem 0;
+//       text-align: center;
+//       text-decoration: none;
+//     }
+//     a:hover {
+//       box-shadow: 0 2rem 3rem rgba($blackColor, 0.9);
+//       transform: translateY(-2px);
+//       transition: all 0.2s;
+//     }
+//     a:active {
+//       box-shadow: 0 1rem 1.5rem rgba($blackColor, 0.9);
+//       transform: translateY(0);
+//     }
+//   }
+//   &:hover figure {
+//     // transform: rotateY(-180deg);
+//     @media only screen and (min-width: 56.25em),
+//       only screen and (hover: hover) {
+//       transform: rotateY(-180deg);
+//     }
+//   }
 
-
-*/
+//   &:hover figcaption {
+//     // transform: rotateY(0);
+//     @media only screen and (min-width: 56.25em),
+//       only screen and (hover: hover) {
+//       transform: rotateY(0);
+//     }
+//   }
+// }
