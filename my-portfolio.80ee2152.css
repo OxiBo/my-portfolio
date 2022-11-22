@@ -314,12 +314,12 @@ section#about div {
   }
 }
 section#about div div.my-image {
-  padding: 0 5rem;
-  margin: 0 2rem;
+  padding: 0 1remrem;
+  margin: 0 0.5rem;
 }
 @media only screen and (min-width: 56.25em) {
   section#about div div.my-image {
-    max-width: 40%;
+    margin: 0 0;
   }
 }
 section#about div div.my-image img {
@@ -478,7 +478,7 @@ section#projects div ul {
 section#projects div ul li {
   position: relative;
   opacity: 1;
-  width: 30rem;
+  width: 85%;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
 }
@@ -513,6 +513,7 @@ section#projects div ul li figure a:visited {
   font-size: 2rem;
   margin: 1.5rem 0;
   text-align: center;
+  color: inherit;
   text-decoration: none;
   display: none;
 }
@@ -617,7 +618,6 @@ section#contact div.contact-info {
   align-items: center;
 }
 section#contact div.contact-info div {
-  min-width: 40rem;
   text-align: center;
   padding: 3rem;
 }
