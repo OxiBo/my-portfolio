@@ -244,6 +244,7 @@ var languagesIcons = {
   SQL: 'sql_icon.png',
   Heroku: 'heroku_icon.png'
 }; // projects list
+// TODO - replace links to apps deployed heroku with github repo links
 
 var projects = [{
   name: 'Make Cocktails',
@@ -536,7 +537,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54848" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52823" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
