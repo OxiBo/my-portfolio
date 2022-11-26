@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 *,
 *:before,
@@ -11,7 +11,7 @@
 html {
   // this defines what 1 rem is
   font-size: 50%; /* calc(8 / 16 * 100)%*/
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
   color: $mainTextColor;
   // @media only screen and (min-width: 68.75em) {
   //   html {
@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  background: url("styles/images/textured.jpeg") no-repeat no-repeat fixed
+  background: url('styles/images/textured.jpeg') no-repeat no-repeat fixed
     center;
   background-size: cover;
   box-sizing: border-box;
@@ -52,7 +52,6 @@ body {
     // h3{font-size: 3rem;}
     main {
       flex: 1;
-     
     }
   }
   footer {

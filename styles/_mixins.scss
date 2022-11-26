@@ -9,7 +9,7 @@
 */
 
 /*
-$breakepoint argument choices:
+$breakpoint argument choices:
 - phone
 -tab-port
 -tab-land
@@ -17,7 +17,7 @@ $breakepoint argument choices:
 
 ORDER: Base + typography > general layout + grid > page layout > components
 
-1em = 16px
+1em = 16px // em work better for media queries (for different browsers
 */
 
 @mixin respond($breakpoint) {

@@ -48,6 +48,7 @@ const languagesIcons = {
 };
 
 // projects list
+// TODO - replace links to apps deployed heroku with github repo links
 const projects = [
   {
     name: 'Make Cocktails',
