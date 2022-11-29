@@ -418,7 +418,6 @@ var projects = [{
   var i = 0; // iterate over sections (it is not an array but array-like that is why need to use Array.prototype and call()) to get sections ids and offset (position)
 
   Array.prototype.forEach.call(section, function (e) {
-    console.log(e.offsetTop);
     sections[e.id] = e.offsetTop;
   });
 
@@ -537,7 +536,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52823" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61519" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -470,15 +470,20 @@ section#projects div {
 }
 section#projects div ul {
   display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  grid-gap: 5rem 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   list-style: none;
   justify-items: center;
+}
+@media only screen and (min-width: 37.5em) {
+  section#projects div ul {
+    grid-gap: 5rem;
+  }
 }
 section#projects div ul li {
   position: relative;
   opacity: 1;
-  width: 90%;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.8);
 }
@@ -515,12 +520,12 @@ section#projects div ul li figure a:visited {
   text-align: center;
   color: inherit;
   text-decoration: none;
-  display: none;
+  display: block;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (min-width: 56.25em) {
   section#projects div ul li figure a,
 section#projects div ul li figure a:visited {
-    display: block;
+    display: none;
   }
 }
 section#projects div ul li figure a:hover {
