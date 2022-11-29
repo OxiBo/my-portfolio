@@ -239,7 +239,6 @@ const projects = [
 
   // iterate over sections (it is not an array but array-like that is why need to use Array.prototype and call()) to get sections ids and offset (position)
   Array.prototype.forEach.call(section, function (e) {
-    console.log(e.offsetTop);
     sections[e.id] = e.offsetTop;
   });
 
