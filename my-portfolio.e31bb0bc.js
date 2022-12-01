@@ -257,7 +257,8 @@ var projects = [{
   name: 'Blog',
   description: 'Working blog with comments, likes, user lists',
   image: 'blog-app.png',
-  url: 'https://dev-blog-oxibo.herokuapp.com/',
+  url: 'https://github.com/OxiBo/dev-blog-app',
+  //'https://dev-blog-oxibo.herokuapp.com/',
   github: 'https://github.com/OxiBo/dev-blog-app'
 }, {
   name: 'Shop&Cook',
@@ -276,7 +277,8 @@ var projects = [{
   name: 'Online store',
   description: 'Create accounts, buy products, keep track of products reviewing',
   image: 'express-playground.png',
-  url: 'https://fullstack-playground.herokuapp.com/',
+  url: 'https://github.com/OxiBo/express-react-playground',
+  //'https://fullstack-playground.herokuapp.com/',
   github: 'https://github.com/OxiBo/express-react-playground'
 }, {
   name: 'Login App',
@@ -536,7 +538,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49679" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54552" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
