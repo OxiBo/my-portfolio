@@ -51,6 +51,13 @@ const languagesIcons = {
 // TODO - replace links to apps deployed heroku with github repo links
 const projects = [
   {
+    name: 'Artists Directory',
+    description: 'Create artist profile and account, find artists',
+    image: 'artist-directory.jpg',
+    url: 'https://github.com/neatowebsolutions/artistdirectory', //"https://shop-cook.herokuapp.com/",
+    github: 'https://github.com/neatowebsolutions/artistdirectory',
+  },
+  {
     name: 'Make Cocktails',
     description:
       'Find cocktails recipes, make list of favorites, email recipes',
@@ -225,7 +232,7 @@ const projects = [
     const href = this.getAttribute('href');
     // console.log(href);
     const offsetTop = document.querySelector(href).offsetTop;
-    console.log(offsetTop);
+
     scroll({
       top: offsetTop - 40,
       behavior: 'smooth',
@@ -291,7 +298,6 @@ const projects = [
         </li>`
     )
     .join()
-
     .replace(/,(?=<li>)/gi, '');
 
   /*
