@@ -247,6 +247,13 @@ var languagesIcons = {
 // TODO - replace links to apps deployed heroku with github repo links
 
 var projects = [{
+  name: 'Artists Directory',
+  description: 'Create artist profile and account, find artists',
+  image: 'artist-directory.jpg',
+  url: 'https://github.com/neatowebsolutions/artistdirectory',
+  //"https://shop-cook.herokuapp.com/",
+  github: 'https://github.com/neatowebsolutions/artistdirectory'
+}, {
   name: 'Make Cocktails',
   description: 'Find cocktails recipes, make list of favorites, email recipes',
   image: 'fun-mixie.png',
@@ -407,7 +414,6 @@ var projects = [{
     var href = this.getAttribute('href'); // console.log(href);
 
     var offsetTop = document.querySelector(href).offsetTop;
-    console.log(offsetTop);
     scroll({
       top: offsetTop - 40,
       behavior: 'smooth'
@@ -538,7 +544,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56047" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49526" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
