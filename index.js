@@ -2,8 +2,7 @@
 
 'use strict';
 import './index.scss';
-// const pdfFileName = "/my-portfolio/100q.pdf";
-// const pdfFileName = "/OB.Stepanchuk_EN.pdf";
+
 const pdfFileName = '/my-portfolio/OB.Stepanchuk_EN.pdf';
 // exclude nav link to pdf file
 const navLinksAll = document.querySelectorAll('#navigation li a');
@@ -48,13 +47,12 @@ const languagesIcons = {
 };
 
 // projects list
-// TODO - replace links to apps deployed heroku with github repo links
 const projects = [
   {
     name: 'Artists Directory',
     description: 'Create artist profile and account, find artists',
     image: 'artist-directory.jpg',
-    url: 'https://github.com/neatowebsolutions/artistdirectory', //"https://shop-cook.herokuapp.com/",
+    url: 'https://github.com/neatowebsolutions/artistdirectory',
     github: 'https://github.com/neatowebsolutions/artistdirectory',
   },
   {
@@ -84,7 +82,7 @@ const projects = [
     name: 'Market Place',
     description: 'Sell, buy, review purchases (graphQL backend)',
     image: 'market-app.png',
-    url: '',
+    url: 'https://github.com/OxiBo/market-app-graphql-prisma',
     github: 'https://github.com/OxiBo/market-app-graphql-prisma',
   },
   {
@@ -205,7 +203,6 @@ const projects = [
   //https://stackoverflow.com/questions/54605406/closing-a-menu-on-an-outside-click-pure-javascript
   // When the user clicks anywhere outside of the menu window, close menu
   window.addEventListener('click', function (event) {
-    // console.log(navbar.className.includes('open'))
     if (
       event.target.closest('button#toggle-menu') !== menuButton &&
       navbar.className.includes('open')
@@ -223,14 +220,12 @@ const projects = [
   // });
   // console.log(navFiltered);
   for (const link of navLinks) {
-    // console.log(link);
     link.addEventListener('click', clickHandler);
   }
 
   function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute('href');
-    // console.log(href);
     const offsetTop = document.querySelector(href).offsetTop;
 
     scroll({
